@@ -1,9 +1,13 @@
+/*Variables to make your life easier*/
+
 :root{
     --dark-cyan: hsl(185, 75%, 39%);
     --dark-blue: hsl(229, 23%, 23%);
     --gray-blue: hsl(227, 10%, 46%);
     --dark-gray: hsl(0, 0%, 59%);
 }
+
+/*Mobile First*/
 
 body{
     margin: 0;
@@ -17,6 +21,10 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position: 150% 140%, -45% -80%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .card{
@@ -85,3 +93,29 @@ body{
     text-align: center;
 }
 
+/*Desktop Version I Guess*/
+
+@media screen and (min-width: 500px) {
+
+    .wrapper{
+        background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+        background-position: -100% 150%, 170% -100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .card{
+        background-color: white;
+        width: 350px;
+        height: 375px;
+        border-radius: 15px;
+    }
+
+    .bg img{
+        width: 350px;
+    }
+
+    #profile-pict{
+        margin-top: -80px;
+    }
+}
